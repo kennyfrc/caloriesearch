@@ -27,5 +27,5 @@ def broccoli_check()
 end
 
 DataMapper.finalize
-DataMapper.auto_migrate! # clears out the db
+# DataMapper.auto_migrate! # clears out the db
 DataMapper.auto_upgrade!
