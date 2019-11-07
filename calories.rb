@@ -25,6 +25,10 @@ get '/food-list/:id' do
 	erb :show
 end
 
+get '/favicon.ico' do
+	"Nothing"
+end
+
 post '/new' do
 	url = "https://api.edamam.com/api/nutrition-data?app_id=#{ENV['APP_ID']}&app_key=#{ENV['API_KEY']}&ingr=1%20#{params[:name]}"
 	@food = Food.create(:name => params[:name], :calories => calorie_check(url), :weight => weight_check(url))
