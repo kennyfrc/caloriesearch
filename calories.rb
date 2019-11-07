@@ -20,7 +20,7 @@ get '/new' do
 	erb :new
 end
 
-get '/:id' do
+get '/food-list/:id' do
 	@food = Food.get(params[:id])
 	erb :show
 end
@@ -28,5 +28,5 @@ end
 post '/new' do
 	url = "https://api.edamam.com/api/nutrition-data?app_id=#{ENV['APP_ID']}&app_key=#{ENV['API_KEY']}&ingr=1%20#{params[:name]}"
 	@food = Food.create(:name => params[:name], :calories => calorie_check(url), :weight => weight_check(url))
-	redirect "/#{@food.id}"
+	redirect "/food-list/#{@food.id}"
 end
