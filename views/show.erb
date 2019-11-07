@@ -1,0 +1,5 @@
+<h3><%= @food.name.capitalize %></h3>
+<p>Calories: <%= @food.calories %> kcal</p>
+<p>Weight: <%= @food.weight %> grams</p>
+<p>This is equivalent to <%= (@food.calories / broccoli_check()[:calories] * broccoli_check()[:weight] / 78).round %> CUPS of Broccoli! </p>
+<p><%= @food.calories != 0 ? '' : 'Not in our database. Try again.' %> </p>
