@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
-gem 'sinatra',            '1.4.8'
+gem 'sinatra',            '2.2.0'
 gem 'data_mapper',        '1.2.0'
 gem 'dm-postgres-adapter'
 gem 'json',               '1.8.6'
